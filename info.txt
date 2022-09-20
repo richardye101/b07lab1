@@ -1,0 +1,2 @@
+some information about the lab:
+lab on java and git
