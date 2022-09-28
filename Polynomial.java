@@ -43,6 +43,39 @@ public class Polynomial{
     newCoef = new double[largestExp];
     newExp = new int[largestExp];
 
+    // My attempt at making this function more space efficient, but doesnt work...yet
+    // int allIdx = 0;
+    // int thisIdx = 0;
+    // int otherIdx = 0;
+    // while(thisIdx < coefficients.length || otherIdx < other.coefficients.length){
+    //   if(thisIdx == coefficients.length){
+    //     newExp[allIdx] = other.exponents[otherIdx];
+    //     newCoef[allIdx] = other.coefficients[otherIdx];
+    //     otherIdx++;
+    //   }
+    //   else if(otherIdx == other.coefficients.length){
+    //     newExp[allIdx] = exponents[thisIdx];
+    //     newCoef[allIdx] = coefficients[thisIdx];
+    //     thisIdx++;
+    //   }
+    //   else if(exponents[thisIdx] <= other.exponents[otherIdx]){
+    //     newExp[allIdx] = exponents[thisIdx];
+    //     if(exponents[thisIdx] == other.exponents[otherIdx]){
+    //       newCoef[allIdx] = coefficients[thisIdx] + other.coefficients[otherIdx];
+    //       otherIdx++;
+    //     }else{
+    //       newCoef[allIdx] = coefficients[thisIdx];
+    //     }
+    //     thisIdx++; 
+    //   }
+    //   else{
+    //     newExp[allIdx] = other.exponents[otherIdx];
+    //     newCoef[allIdx] = other.coefficients[otherIdx];
+    //     otherIdx++;
+    //   }
+    //   allIdx++;
+    // }
+
     for(int i = 0; i < coefficients.length; i++){
       int curExp = exponents[i];
       newExp[curExp] = curExp;
